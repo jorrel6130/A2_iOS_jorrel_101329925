@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         firstProduct.setValue("Mac", forKey: "name")
         firstProduct.setValue("First Product", forKey: "desc")
         firstProduct.setValue(500.0, forKey: "price")
+        firstProduct.setValue("Apple", forKey: "provider")
     }
 
 
