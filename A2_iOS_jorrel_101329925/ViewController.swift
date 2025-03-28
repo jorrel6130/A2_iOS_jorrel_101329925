@@ -10,6 +10,11 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var providerLabel: UILabel!
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
