@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         let firstProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
         firstProduct.setValue("Mac", forKey: "name")
         firstProduct.setValue("First Product", forKey: "desc")
+        firstProduct.setValue(500.0, forKey: "price")
     }
 
 
