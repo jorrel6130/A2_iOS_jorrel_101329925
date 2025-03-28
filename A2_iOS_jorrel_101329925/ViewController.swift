@@ -22,13 +22,28 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let context = appDelegate.persistentContainer.viewContext
         
-        let firstProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
-        firstProduct.setValue("Mac", forKey: "name")
-        firstProduct.setValue("First Product", forKey: "desc")
-        firstProduct.setValue(500.0, forKey: "price")
-        firstProduct.setValue("Apple", forKey: "provider")
-        
-        appDelegate.saveContext()
+        if checkForFirst(context) == false {
+            let firstProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
+            firstProduct.setValue("Mac", forKey: "name")
+            firstProduct.setValue("First Product", forKey: "desc")
+            firstProduct.setValue(500.0, forKey: "price")
+            firstProduct.setValue("Apple", forKey: "provider")
+            
+            appDelegate.saveContext()
+        }
+    }
+    
+    func checkForFirst(_ context: NSManagedObjectContext) -> Bool {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
+        do {
+            let results = try context.fetch(request)
+            if results.count > 0 {
+                return true
+            }
+        } catch {
+            print(error)
+        }
+        return false
     }
     
     @objc func saveData() {
