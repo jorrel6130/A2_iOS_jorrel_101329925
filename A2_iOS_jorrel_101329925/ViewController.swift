@@ -18,7 +18,8 @@ class ViewController: UIViewController {
         let context = appDelegate.persistentContainer.viewContext
         
         let firstProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
-        firstProduct.setValue("First Product", forKey: "name")
+        firstProduct.setValue("Mac", forKey: "name")
+        firstProduct.setValue("First Product", forKey: "desc")
     }
 
 
