@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -15,6 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let context = appDelegate.persistentContainer.viewContext
+        
+        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
     }
 
 
