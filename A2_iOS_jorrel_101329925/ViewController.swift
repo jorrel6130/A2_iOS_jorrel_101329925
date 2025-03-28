@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let context = appDelegate.persistentContainer.viewContext
         
-        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
+        let firstProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
+        firstProduct.setValue("First Product", forKey: "name")
     }
 
 
