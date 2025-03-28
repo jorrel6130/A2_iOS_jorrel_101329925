@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var providerLabel: UILabel!
     
+    var products: [Product]?
+    
+    var currentIndex = 0
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
@@ -30,6 +34,19 @@ class ViewController: UIViewController {
             firstProduct.setValue("Apple", forKey: "provider")
             
             appDelegate.saveContext()
+        }
+    }
+    
+    func fetchData() {
+        
+        products = [Product]()
+        let request: NSFetchRequest<Product> = Product.fetchRequest()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            products = try context.fetch(request)
+        } catch {
+            print("Error: \(error.localizedDescription)")
         }
     }
     
