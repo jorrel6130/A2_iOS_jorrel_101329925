@@ -42,12 +42,12 @@ class ViewController: UIViewController {
     }
     
     func updateLabels() {
-        let product = products![currentIndex]
+        let product = products?[currentIndex]
         
-        nameLabel.text = product.value(forKey: "name") as? String
-        descLabel.text = product.value(forKey: "desc") as? String
-        priceLabel.text = product.value(forKey: "price") as? String
-        providerLabel.text = product.value(forKey: "provider") as? String
+        nameLabel.text = product!.value(forKey: "name") as? String
+        descLabel.text = product!.value(forKey: "desc") as? String
+        priceLabel.text = product!.value(forKey: "price") as? String
+        providerLabel.text = product!.value(forKey: "provider") as? String
     }
     
     func fetchData() {
