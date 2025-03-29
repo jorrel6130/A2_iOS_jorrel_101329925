@@ -52,6 +52,7 @@ class ViewController: UIViewController {
             if query == productName {
                 print("Index: \(index) Name: \(productName ?? "")")
                 currentIndex = index
+                print(currentIndex)
                 updateLabels()
                 return
             }
@@ -61,14 +62,16 @@ class ViewController: UIViewController {
     
     @IBAction func nextButton(_ sender: UIButton) {
         if (products!.count > currentIndex + 1) {
-            currentIndex+=1
+            currentIndex = currentIndex + 1
+            print(currentIndex)
         }
         updateLabels()
     }
     
     @IBAction func previousButton(_ sender: UIButton) {
-        if (currentIndex - 1 > 0) {
-            currentIndex-=1
+        if (currentIndex - 1 >= 0) {
+            currentIndex = currentIndex - 1
+            print(currentIndex)
         }
         updateLabels()
     }

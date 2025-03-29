@@ -97,7 +97,7 @@
                                 <segue destination="GvJ-s6-Jkc" kind="show" id="FB9-yz-zWM"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Table View" image="table" catalog="system" id="Xfn-ra-6cH"/>
+                        <barButtonItem key="rightBarButtonItem" title="Table View" image="tablecells" catalog="system" id="Xfn-ra-6cH"/>
                     </navigationItem>
                     <connections>
                         <outlet property="descLabel" destination="7uA-2b-GXZ" id="L8x-cZ-lc3"/>
@@ -119,8 +119,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="g3K-df-XMT">
-                                <rect key="frame" x="75" y="296" width="242" height="260.33333333333331"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" id="g3K-df-XMT">
+                                <rect key="frame" x="74.461538461536747" y="296.18974358972901" width="242" height="260.33333333333292"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="CAz-bx-oHp">
                                         <rect key="frame" x="0.0" y="0.0" width="242" height="199"/>
@@ -228,7 +229,7 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="table" catalog="system" width="128" height="93"/>
+        <image name="tablecells" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

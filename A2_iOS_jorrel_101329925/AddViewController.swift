@@ -24,7 +24,7 @@ class AddViewController: UIViewController {
         let name = textInputs[0].text ?? ""
         let desc = textInputs[1].text ?? ""
         let price = Float(textInputs[2].text!) ?? 0.0
-        let provider = textInputs[3].text ?? "0"
+        let provider = textInputs[3].text ?? ""
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
