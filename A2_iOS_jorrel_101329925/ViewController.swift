@@ -43,6 +43,21 @@ class ViewController: UIViewController {
         updateLabels()
     }
     
+    @IBAction func nextButton(_ sender: UIButton) {
+        if (products!.count > currentIndex + 1) {
+            currentIndex+=1
+        }
+        updateLabels()
+    }
+    
+    @IBAction func previousButton(_ sender: UIButton) {
+        if (currentIndex - 1 > 0) {
+            currentIndex-=1
+        }
+        updateLabels()
+    }
+    
+    
     func updateLabels() {
         let product = products?[currentIndex]
         

@@ -52,11 +52,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="170.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Previous"/>
+                                                <connections>
+                                                    <action selector="previousButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="929-tf-Ldd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikz-aL-Y1a">
                                                 <rect key="frame" x="276.66666666666669" y="0.0" width="89.666666666666686" height="170.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                                <connections>
+                                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ZM-b0-mbd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
