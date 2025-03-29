@@ -45,6 +45,11 @@ class ViewController: UIViewController {
         updateLabels()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let productTable = segue.destination as? TableViewController
+        productTable?.products = products
+    }
+    
     @IBAction func searchByName(_ sender: UIButton) {
         for (index, product) in products!.enumerated() {
             let productName = product.value(forKey: "name") as? String
