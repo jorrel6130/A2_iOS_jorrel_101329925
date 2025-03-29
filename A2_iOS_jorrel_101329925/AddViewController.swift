@@ -21,20 +21,21 @@ class AddViewController: UIViewController {
     
     @IBAction func saveButton(_ sender: UIButton) {
         
+        let name = textInputs[0].text ?? ""
+        let desc = textInputs[1].text ?? ""
+        let price = Float(textInputs[2].text!) ?? 0.0
+        let provider = textInputs[3].text ?? "0"
         
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        saveData()
+        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
+        newProduct.setValue(name, forKey: "name")
+        newProduct.setValue(desc, forKey: "desc")
+        newProduct.setValue(price, forKey: "price")
+        newProduct.setValue(provider, forKey: "provider")
+        
+        appDelegate.saveContext()
     }
-    
-    @objc func saveData() {
-        let context = appDelegate.persistentContainer.viewContext
-        do {
-            try context.save()
-        } catch {
-            print("Failed to save: \(error.localizedDescription)")
-        }
-    }
-
 
 }
 

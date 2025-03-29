@@ -111,16 +111,6 @@ class ViewController: UIViewController {
         }
         return false
     }
-    
-    @objc func saveData() {
-        let context = appDelegate.persistentContainer.viewContext
-        do {
-            try context.save()
-        } catch {
-            print("Failed to save: \(error.localizedDescription)")
-        }
-    }
-
 
 }
 
