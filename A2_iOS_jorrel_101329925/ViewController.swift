@@ -48,8 +48,15 @@ class ViewController: UIViewController {
     @IBAction func searchByName(_ sender: UIButton) {
         for (index, product) in products!.enumerated() {
             let productName = product.value(forKey: "name") as? String
+            let productDesc = product.value(forKey: "desc") as? String
             let query = searchName.text ?? ""
             if query == productName {
+                print("Index: \(index) Name: \(productName ?? "")")
+                currentIndex = index
+                print(currentIndex)
+                updateLabels()
+                return
+            } else if (productDesc!.contains(query)) {
                 print("Index: \(index) Name: \(productName ?? "")")
                 currentIndex = index
                 print(currentIndex)
