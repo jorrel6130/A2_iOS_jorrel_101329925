@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var providerLabel: UILabel!
     
+    @IBOutlet weak var searchName: UITextField!
+    
     var products: [Product]?
     
     var currentIndex: Int = 0
@@ -41,6 +43,20 @@ class ViewController: UIViewController {
         currentIndex = 0
         
         updateLabels()
+    }
+    
+    @IBAction func searchByName(_ sender: UIButton) {
+        for (index, product) in products!.enumerated() {
+            let productName = product.value(forKey: "name") as? String
+            let query = searchName.text ?? ""
+            if query == productName {
+                print("Index: \(index) Name: \(productName ?? "")")
+                currentIndex = index
+                updateLabels()
+                return
+            }
+            
+        }
     }
     
     @IBAction func nextButton(_ sender: UIButton) {

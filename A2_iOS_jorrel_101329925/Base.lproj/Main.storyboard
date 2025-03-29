@@ -46,10 +46,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="187" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJ0-Hg-n4G">
-                                        <rect key="frame" x="274.33333333333337" y="129.33333333333337" width="366.33333333333337" height="170.66666666666663"/>
+                                        <rect key="frame" x="274.33333333333337" y="129.33333333333334" width="366.33333333333337" height="56.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQ1-58-GcV">
-                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="170.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="56.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Previous"/>
                                                 <connections>
@@ -57,7 +57,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikz-aL-Y1a">
-                                                <rect key="frame" x="276.66666666666669" y="0.0" width="89.666666666666686" height="170.66666666666666"/>
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="89.666666666666686" height="56.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                                 <connections>
@@ -66,6 +66,25 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search By Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A6T-PB-zLf">
+                                        <rect key="frame" x="390" y="198" width="135" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XHn-35-O7g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBG-bS-MUs">
+                                        <rect key="frame" x="418.66666666666669" y="260" width="77.333333333333314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="c8v-mx-dvT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Search"/>
+                                        <connections>
+                                            <action selector="searchByName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVw-CW-Ynb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -77,6 +96,7 @@
                         <outlet property="nameLabel" destination="rkc-M5-vEO" id="s9L-YU-pfo"/>
                         <outlet property="priceLabel" destination="YJx-8j-kwg" id="8jE-3O-4CK"/>
                         <outlet property="providerLabel" destination="M7V-C0-Fz9" id="319-Dq-bqm"/>
+                        <outlet property="searchName" destination="A6T-PB-zLf" id="r39-WR-3R1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
