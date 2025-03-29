@@ -14,6 +14,7 @@
 		522477AA2D96505A001B84A4 /* A2_iOS_jorrel_101329925.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 522477A82D96505A001B84A4 /* A2_iOS_jorrel_101329925.xcdatamodeld */; };
 		522477AC2D96506C001B84A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522477AB2D96506C001B84A4 /* Assets.xcassets */; };
 		522477AF2D96506C001B84A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522477AD2D96506C001B84A4 /* LaunchScreen.storyboard */; };
+		52734F622D97839400FE0AF0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52734F612D97839400FE0AF0 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		522477AB2D96506C001B84A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522477AE2D96506C001B84A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		522477B02D96506C001B84A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52734F612D97839400FE0AF0 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				5224779F2D96505A001B84A4 /* AppDelegate.swift */,
 				522477A12D96505A001B84A4 /* SceneDelegate.swift */,
 				522477A32D96505A001B84A4 /* ViewController.swift */,
+				52734F612D97839400FE0AF0 /* AddViewController.swift */,
 				522477A52D96505A001B84A4 /* Main.storyboard */,
 				522477AB2D96506C001B84A4 /* Assets.xcassets */,
 				522477AD2D96506C001B84A4 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52734F622D97839400FE0AF0 /* AddViewController.swift in Sources */,
 				522477A42D96505A001B84A4 /* ViewController.swift in Sources */,
 				522477AA2D96505A001B84A4 /* A2_iOS_jorrel_101329925.xcdatamodeld in Sources */,
 				522477A02D96505A001B84A4 /* AppDelegate.swift in Sources */,
