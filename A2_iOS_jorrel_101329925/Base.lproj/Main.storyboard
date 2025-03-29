@@ -119,13 +119,13 @@
         <!--Table View Controller-->
         <scene sceneID="4oe-iX-1JO">
             <objects>
-                <tableViewController id="gqy-sK-Eg8" sceneMemberID="viewController">
+                <tableViewController id="gqy-sK-Eg8" customClass="TableViewController" customModule="A2_iOS_jorrel_101329925" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ox4-uS-JEp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="5gh-P4-h9t" detailTextLabel="eYr-b9-9o4" style="IBUITableViewCellStyleSubtitle" id="Kcq-Jt-XC8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" textLabel="5gh-P4-h9t" detailTextLabel="eYr-b9-9o4" style="IBUITableViewCellStyleSubtitle" id="Kcq-Jt-XC8">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kcq-Jt-XC8" id="6Ma-Kg-eQn">
