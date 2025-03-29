@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     var products: [Product]?
     
-    var currentIndex = 0
+    var currentIndex: Int = 0
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             let firstProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
             firstProduct.setValue("Mac", forKey: "name")
             firstProduct.setValue("First Product", forKey: "desc")
-            firstProduct.setValue(500.0, forKey: "price")
+            firstProduct.setValue(499.99, forKey: "price")
             firstProduct.setValue("Apple", forKey: "provider")
             
             appDelegate.saveContext()
@@ -38,15 +38,20 @@ class ViewController: UIViewController {
         
         fetchData()
         
+        currentIndex = 0
+        
         updateLabels()
     }
     
     func updateLabels() {
         let product = products?[currentIndex]
         
+        let price = product!.value(forKey: "price")
+        let priceString = ("$\(price ?? 0.0)")
+        
         nameLabel.text = product!.value(forKey: "name") as? String
         descLabel.text = product!.value(forKey: "desc") as? String
-        priceLabel.text = product!.value(forKey: "price") as? String
+        priceLabel.text = priceString
         providerLabel.text = product!.value(forKey: "provider") as? String
     }
     
