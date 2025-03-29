@@ -45,8 +45,20 @@ class ViewController: UIViewController {
         updateLabels()
     }
     
+    @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
+        if let previousView = sender.source as? AddViewController {
+            fetchData()
+            products = previousView.products
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let productAdd = segue.destination as? AddViewController
+        fetchData()
+        productAdd?.products = products
+        
         let productTable = segue.destination as? TableViewController
+        fetchData()
         productTable?.products = products
     }
     

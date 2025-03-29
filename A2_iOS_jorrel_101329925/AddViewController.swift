@@ -12,6 +12,8 @@ class AddViewController: UIViewController {
     
     @IBOutlet var textInputs: [UITextField]!
     
+    var products: [Product]?
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
@@ -28,11 +30,19 @@ class AddViewController: UIViewController {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
-        newProduct.setValue(name, forKey: "name")
-        newProduct.setValue(desc, forKey: "desc")
-        newProduct.setValue(price, forKey: "price")
-        newProduct.setValue(provider, forKey: "provider")
+//        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
+//        newProduct.setValue(name, forKey: "name")
+//        newProduct.setValue(desc, forKey: "desc")
+//        newProduct.setValue(price, forKey: "price")
+//        newProduct.setValue(provider, forKey: "provider")
+        
+        let product = Product(context: context)
+        product.name = name
+        product.desc = desc
+        product.price = price
+        product.provider = provider
+        
+        products?.append(product)
         
         appDelegate.saveContext()
     }
