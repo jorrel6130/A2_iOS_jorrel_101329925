@@ -30,12 +30,6 @@ class AddViewController: UIViewController {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-//        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
-//        newProduct.setValue(name, forKey: "name")
-//        newProduct.setValue(desc, forKey: "desc")
-//        newProduct.setValue(price, forKey: "price")
-//        newProduct.setValue(provider, forKey: "provider")
-        
         let product = Product(context: context)
         product.name = name
         product.desc = desc
